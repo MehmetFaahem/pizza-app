@@ -10,9 +10,9 @@ import { useSafeAreaInsetsStyle } from "../utils/useSafeAreaInsetsStyle"
 const welcomeLogo = require("../../assets/images/logo.png")
 const welcomeFace = require("../../assets/images/welcome-face.png")
 
-interface WelcomeScreenProps extends AppStackScreenProps<"Welcome"> {}
+interface HomeScreenProps extends AppStackScreenProps<"Home"> {}
 
-export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeScreen() {
+export const HomeScreen: FC<HomeScreenProps> = observer(function HomeScreen() {
   const $bottomContainerInsets = useSafeAreaInsetsStyle(["bottom"])
 
   return (
@@ -27,7 +27,7 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
         />
         <Text tx="welcomeScreen.exciting" preset="subheading" />
         <Image style={$welcomeFace} source={welcomeFace} resizeMode="contain" />
-        <Button onPress={() => navigate("Home")}>Go</Button>
+        <Button onPress={() => navigate("Welcome")}>Home</Button>
       </View>
 
       <View style={[$bottomContainer, $bottomContainerInsets]}>
